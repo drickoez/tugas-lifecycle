@@ -15,7 +15,7 @@ class News extends React.Component {
 
   componentDidMount() {
     const apiKey = "c4377f542bee4e629a9343a0beb0f1b9";
-    const apiUrl = `https://newsapi.org/v2/everything?q=trending&from=2023-04-09&to=2023-04-09&sortBy=popularity&apiKey=${apiKey}`;
+    const apiUrl = `https://newsapi.org/v2/everything?q=trending&sortBy=popularity&apiKey=${apiKey}`;
     axios
       .get(apiUrl)
       .then((response) => {
