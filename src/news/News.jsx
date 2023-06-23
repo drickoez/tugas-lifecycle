@@ -1,6 +1,7 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.css";
 import axios from "axios";
+import { newsApiKey } from "../config";
 
 class News extends React.Component {
   constructor(props) {
@@ -14,7 +15,7 @@ class News extends React.Component {
   }
 
   componentDidMount() {
-    const apiKey = "c4377f542bee4e629a9343a0beb0f1b9";
+    const apiKey = newsApiKey;
     const apiUrl = `https://newsapi.org/v2/everything?q=trending&sortBy=popularity&apiKey=${apiKey}`;
     axios
       .get(apiUrl)
